@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: 0;    
+    
+}
+.transition{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+   /* transition-property: all;
+    transition-duration: 5s;
+    transition-delay: 1s;
+    transition-timing-function: linear;*/
+
+    transition: all 5s linear;
+}
+
+.transition:hover{ 
+    background-color: purple;
+    width: 500px;
+
+
+}
+
+.preloader{
+width: 200px;
+height: 200px;
+border-radius: 50%;
+border: 5px double green;
+border-top-color: transparent;
+margin: 0 Auto;
+
+/*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+
+animation: preloader;
+animation-duration: 1.5s;
+animation-timing-function: linear;
+/*animation-delay: 1s;*/
+animation-iteration-count: infinite;
+animation-direction: normal;
+/*animation-play-state: paused;*/
+/*animation-fill-mode: ;*/
+
+}
+
+@keyframes preloader {
+    0%{
+        transform: rotate(0deg)
+    }
+25%{
+    border-right-color: purple;
+}
+50%{
+    border-left-color: red;
+}
+75%{
+    border-bottom-color: skyblue;
+}
+    100%{
+        transform:rotate(360deg)
+
+    }
+}
